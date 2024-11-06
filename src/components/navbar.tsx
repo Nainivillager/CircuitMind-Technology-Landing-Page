@@ -1,18 +1,142 @@
+// import { Search, ShoppingBag, User, UserPlus } from 'lucide-react';
+
+// export default function Navbar() {
+//   return (
+//     <nav className="bg-orange-100 shadow-md rounded-lg mx-2 sm:mx-4 lg:mx-6 my-2">
+//       <div className="max-w-7xl mx-auto px-4">
+//         <div className="flex flex-col md:flex-row items-center justify-between h-auto py-3 md:h-20">
+//           {/* Logo Section */}
+//           <div className="flex items-center">
+//             <img
+//               className="mix-blend-multiply h-16 md:h-20 object-contain transition-transform duration-300 hover:scale-105"
+//               src="Clogo.webp"
+//               alt="Company Logo"
+//             />
+//           </div>
+
+//           {/* Navigation Items */}
+//           <div className="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
+//             {/* Search Button */}
+//             <button className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors duration-200 group">
+//               <Search className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+//               <span className="text-sm font-medium">Search</span>
+//             </button>
+
+//             {/* Store Button */}
+//             <button className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors duration-200 group">
+//               <ShoppingBag className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+//               <span className="text-sm font-medium">Store</span>
+//             </button>
+
+//             {/* Sign In Button */}
+//             <button className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors duration-200 group">
+//               <User className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+//               <span className="text-sm font-medium">Sign In</span>
+//             </button>
+
+//             {/* Register Button */}
+//             <button className="flex items-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors duration-200 space-x-1 group">
+//               <UserPlus className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+//               <span className="text-sm font-medium">Register</span>
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// }
+import { useState } from 'react';
+import { Search, ShoppingBag, User, UserPlus, Menu, X } from 'lucide-react';
+
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className="flex flex-col md:flex-row justify-between bg-orange-200 rounded-lg mx-5 my-1 h-auto md:h-24 lg:h-28 text-center p-2">
-      <div className="flex justify-center md:justify-start mb-2 md:mb-0">
-        <img
-          className="mix-blend-multiply h-20 md:h-24 lg:h-28"
-          src="Clogo.webp"
-          alt="company Logo"
-        />
+    <nav className="bg-gray-200 shadow-md rounded-lg mx-2 sm:mx-4 lg:mx-6">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo Section */}
+          <div className="flex items-center">
+            <img
+              className="mix-blend-multiply h-16 md:h-20 object-contain transition-transform duration-300 hover:scale-105"
+              src="Clogo.webp"
+              alt="Company Logo"
+            />
+          </div>
+
+          {/* Hamburger Menu Button (visible only on mobile) */}
+          <button
+            className="md:hidden p-2 rounded-lg hover:bg-orange-200 transition-colors duration-200"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? (
+              <X className="w-6 h-6 text-gray-700" />
+            ) : (
+              <Menu className="w-6 h-6 text-gray-700" />
+            )}
+          </button>
+
+          {/* Desktop Navigation Items */}
+          <div className="hidden md:flex items-center space-x-6">
+            {/* Search Button */}
+            <button className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors duration-200 group">
+              <Search className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+              <span className="text-sm font-medium">Search</span>
+            </button>
+
+            {/* Store Button */}
+            <button className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors duration-200 group">
+              <ShoppingBag className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+              <span className="text-sm font-medium">Store</span>
+            </button>
+
+            {/* Sign In Button */}
+            <button className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors duration-200 group">
+              <User className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+              <span className="text-sm font-medium">Sign In</span>
+            </button>
+
+            {/* Register Button */}
+            <button className="flex items-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors duration-200 space-x-1 group">
+              <UserPlus className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+              <span className="text-sm font-medium">Register</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu (slides down when hamburger is clicked) */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="flex flex-col space-y-4 pb-6 pt-2">
+            {/* Search Button */}
+            <button className="flex items-center space-x-2 text-gray-700 hover:text-orange-600 transition-colors duration-200 group px-2 py-1 rounded-lg hover:bg-orange-50">
+              <Search className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+              <span className="text-sm font-medium">Search</span>
+            </button>
+
+            {/* Store Button */}
+            <button className="flex items-center space-x-2 text-gray-700 hover:text-orange-600 transition-colors duration-200 group px-2 py-1 rounded-lg hover:bg-orange-50">
+              <ShoppingBag className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+              <span className="text-sm font-medium">Store</span>
+            </button>
+
+            {/* Sign In Button */}
+            <button className="flex items-center space-x-2 text-gray-700 hover:text-orange-600 transition-colors duration-200 group px-2 py-1 rounded-lg hover:bg-orange-50">
+              <User className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+              <span className="text-sm font-medium">Sign In</span>
+            </button>
+
+            {/* Register Button */}
+            <button className="flex items-center justify-center space-x-1 px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors duration-200 group">
+              <UserPlus className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+              <span className="text-sm font-medium">Register</span>
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center md:justify-end space-y-2 md:space-y-0 md:space-x-4">
-        <div>Search</div>
-        <div>Store</div>
-        <div>Sign In</div>
-      </div>
-    </div>
+    </nav>
   );
 }
