@@ -12,7 +12,6 @@ function Home() {
         <Marque />
         {/* <Features /> */}
         <Offerings />
-
         <CustomerFeedback />
         <Galllery />
       </div>
