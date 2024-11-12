@@ -3,6 +3,7 @@ import {
   Mail,
   Facebook,
   Instagram,
+  Linkedin,
   Youtube,
   MapPin,
   Clock,
@@ -23,6 +24,12 @@ const Footer = () => {
       href: 'https://www.instagram.com/circuitmind_technology/',
       label: 'Instagram',
       hoverColor: 'hover:bg-pink-600'
+    },
+    {
+      icon: <Linkedin className="w-5 h-5" />,
+      href: 'https://www.linkedin.com/in/circuitmind-technology/',
+      label: 'LinkedIn',
+      hoverColor: 'hover:bg-red-600'
     },
     {
       icon: <Youtube className="w-5 h-5" />,
