@@ -61,13 +61,13 @@ const Footer = () => {
     },
     {
       icon: <MapPin className="w-5 h-5" />,
-      content: '615, Mukherjee Nagar, Delhi 110009',
-      href: '#'
+      content: 'c-112, H59, Cloud 24, Noida Sector 63, Uttar Pradesh',
+      href: 'https://maps.app.goo.gl/ELDWq5TsrRm8T2Wr6'
     },
     {
       icon: <Clock className="w-5 h-5" />,
       content: 'Mon - Fri: 9:00 AM - 6:00 PM',
-      href: '#'
+      href: 'https://maps.app.goo.gl/ELDWq5TsrRm8T2Wr6'
     }
   ];
 
