@@ -32,8 +32,17 @@ const Gallery = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Heading with animated underline */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-2">Image Gallery</h1>
+      <div className="text-center mb-8">
+        <div className="flex justify-center items-center py-10 bg-gray-100 animate-fadeIn">
+          {' '}
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
+            {' '}
+            Explore CircuitMind{' '}
+            <span className="block text-blue-800 animate-pulse">
+              Your Gallery of Learning & Inspiration
+            </span>{' '}
+          </h1>
+        </div>
         <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full transform transition-all duration-300 hover:w-32 hover:bg-blue-600" />
       </div>
 
