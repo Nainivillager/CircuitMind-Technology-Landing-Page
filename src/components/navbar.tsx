@@ -1,70 +1,25 @@
-// import { Search, ShoppingBag, User, UserPlus } from 'lucide-react';
-
-// export default function Navbar() {
-//   return (
-//     <nav className="bg-orange-100 shadow-md rounded-lg mx-2 sm:mx-4 lg:mx-6 my-2">
-//       <div className="max-w-7xl mx-auto px-4">
-//         <div className="flex flex-col md:flex-row items-center justify-between h-auto py-3 md:h-20">
-//           {/* Logo Section */}
-//           <div className="flex items-center">
-//             <img
-//               className="mix-blend-multiply h-16 md:h-20 object-contain transition-transform duration-300 hover:scale-105"
-//               src="Clogo.webp"
-//               alt="Company Logo"
-//             />
-//           </div>
-
-//           {/* Navigation Items */}
-//           <div className="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
-//             {/* Search Button */}
-//             <button className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors duration-200 group">
-//               <Search className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
-//               <span className="text-sm font-medium">Search</span>
-//             </button>
-
-//             {/* Store Button */}
-//             <button className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors duration-200 group">
-//               <ShoppingBag className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
-//               <span className="text-sm font-medium">Store</span>
-//             </button>
-
-//             {/* Sign In Button */}
-//             <button className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors duration-200 group">
-//               <User className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
-//               <span className="text-sm font-medium">Sign In</span>
-//             </button>
-
-//             {/* Register Button */}
-//             <button className="flex items-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors duration-200 space-x-1 group">
-//               <UserPlus className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
-//               <span className="text-sm font-medium">Register</span>
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// }
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Search, ShoppingBag, User, UserPlus, Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const navigate = useNavigate();
 
   return (
     <nav className="bg-gray-200 shadow-md rounded-lg mx-2 sm:mx-4 lg:mx-6">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo Section */}
-          <div className="flex items-center">
+          {/* Logo Section with Link to Home */}
+          <Link to="/" className="flex items-center">
             <img
               className="mix-blend-multiply h-16 md:h-20 object-contain transition-transform duration-300 hover:scale-105"
               src="Clogo.webp"
               alt="Company Logo"
             />
-          </div>
+          </Link>
 
-          {/* Hamburger Menu Button (visible only on mobile) */}
+          {/* Hamburger Menu Button */}
           <button
             className="md:hidden p-2 rounded-lg hover:bg-orange-200 transition-colors duration-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -84,27 +39,36 @@ export default function Navbar() {
               <span className="text-sm font-medium">Search</span>
             </button>
 
-            {/* Store Button */}
-            <button className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors duration-200 group">
+            {/* Store Link */}
+            <Link
+              to="/store"
+              className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors duration-200 group"
+            >
               <ShoppingBag className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
               <span className="text-sm font-medium">Store</span>
-            </button>
+            </Link>
 
-            {/* Sign In Button */}
-            <button className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors duration-200 group">
+            {/* Sign In Link */}
+            <Link
+              to="/sign"
+              className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors duration-200 group"
+            >
               <User className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
               <span className="text-sm font-medium">Sign In</span>
-            </button>
+            </Link>
 
-            {/* Register Button */}
-            <button className="flex items-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors duration-200 space-x-1 group">
+            {/* Register Link */}
+            <Link
+              to="/register"
+              className="flex items-center px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors duration-200 space-x-1 group"
+            >
               <UserPlus className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
               <span className="text-sm font-medium">Register</span>
-            </button>
+            </Link>
           </div>
         </div>
 
-        {/* Mobile Menu (slides down when hamburger is clicked) */}
+        {/* Mobile Menu */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
             isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
@@ -117,23 +81,35 @@ export default function Navbar() {
               <span className="text-sm font-medium">Search</span>
             </button>
 
-            {/* Store Button */}
-            <button className="flex items-center space-x-2 text-gray-700 hover:text-orange-600 transition-colors duration-200 group px-2 py-1 rounded-lg hover:bg-orange-50">
+            {/* Store Link */}
+            <Link
+              to="/store"
+              className="flex items-center space-x-2 text-gray-700 hover:text-orange-600 transition-colors duration-200 group px-2 py-1 rounded-lg hover:bg-orange-50"
+              onClick={() => setIsMenuOpen(false)}
+            >
               <ShoppingBag className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
               <span className="text-sm font-medium">Store</span>
-            </button>
+            </Link>
 
-            {/* Sign In Button */}
-            <button className="flex items-center space-x-2 text-gray-700 hover:text-orange-600 transition-colors duration-200 group px-2 py-1 rounded-lg hover:bg-orange-50">
+            {/* Sign In Link */}
+            <Link
+              to="/sign"
+              className="flex items-center space-x-2 text-gray-700 hover:text-orange-600 transition-colors duration-200 group px-2 py-1 rounded-lg hover:bg-orange-50"
+              onClick={() => setIsMenuOpen(false)}
+            >
               <User className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
               <span className="text-sm font-medium">Sign In</span>
-            </button>
+            </Link>
 
-            {/* Register Button */}
-            <button className="flex items-center justify-center space-x-1 px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors duration-200 group">
+            {/* Register Link */}
+            <Link
+              to="/register"
+              className="flex items-center justify-center space-x-1 px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors duration-200 group"
+              onClick={() => setIsMenuOpen(false)}
+            >
               <UserPlus className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
               <span className="text-sm font-medium">Register</span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

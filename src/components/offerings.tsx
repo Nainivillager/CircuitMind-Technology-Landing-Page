@@ -89,10 +89,13 @@ export default function Features() {
   ];
 
   return (
-    <div className="text-center py-12">
-      <div>
-        <h1 className="text-4xl px-4 font-bold mb-12">
-          Want to know What we Offer!
+    <div className="text-center pt-4 pb-2">
+      <div className="flex justify-center items-center bg-gray-100">
+        {' '}
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
+          {' '}
+          Discover Our{' '}
+          <span className="block text-blue-600">Tailored Offerings!</span>{' '}
         </h1>
       </div>
 

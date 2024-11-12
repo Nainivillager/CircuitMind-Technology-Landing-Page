@@ -1,23 +1,17 @@
 import './App.css';
-import './components/navbar';
-import Navbar from './components/navbar';
-import HeroSection from './components/heroSection';
-import Marque from './components/marque';
-// import Features from './components/features';
-import Offerings from './components/offerings';
-import Footer from './components/footer';
-
+import NavRoutes from './components/navRoutes';
+import Layout from './components/Layout';
+import { BrowserRouter } from 'react-router-dom';
 function App() {
   return (
     <>
-      <div className="bg-slate-50">
-        <Navbar />
-        <HeroSection />
-        <Marque />
-        {/* <Features /> */}
-        <Offerings />
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <div className="bg-slate-50">
+          <Layout>
+            <NavRoutes />
+          </Layout>
+        </div>
+      </BrowserRouter>
     </>
   );
 }
