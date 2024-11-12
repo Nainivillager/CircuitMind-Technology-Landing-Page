@@ -151,6 +151,7 @@ const Footer = () => {
                 />
                 <button
                   type="submit"
+                  title="send-btn"
                   className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors duration-200"
                 >
                   <Send className="w-4 h-4" />

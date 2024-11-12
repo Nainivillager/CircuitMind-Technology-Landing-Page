@@ -2,6 +2,18 @@ import { useState, useEffect } from 'react';
 import { Star, StarHalf, Quote } from 'lucide-react';
 
 const CustomerReviews = () => {
+  interface Review {
+    id: number;
+    name: string;
+    src: string;
+    rating: number;
+    review: string;
+  }
+
+  interface CardProps {
+    review: Review;
+    isCenter: boolean;
+  }
   const reviews = [
     {
       id: 1,
@@ -49,7 +61,7 @@ const CustomerReviews = () => {
     return () => clearInterval(timer);
   }, [currentIndex, reviews.length]);
 
-  const handleSlideChange = (newIndex) => {
+  const handleSlideChange = (newIndex: number) => {
     setIsTransitioning(true);
     setCurrentIndex(newIndex);
     setTimeout(() => setIsTransitioning(false), 500);
@@ -117,8 +129,7 @@ const CustomerReviews = () => {
 
     return visibleReviews;
   };
-
-  const Card = ({ review, isCenter }) => {
+  const Card: React.FC<CardProps> = ({ review, isCenter }) => {
     const getCardClasses = () => {
       const baseClasses =
         'bg-white rounded-lg shadow-lg p-6 mx-2 flex-shrink-0 transition-all duration-500 transform';
@@ -170,6 +181,7 @@ const CustomerReviews = () => {
     <div className="flex justify-center space-x-2 mt-4">
       {reviews.map((_, index) => (
         <button
+          title="slider-btn"
           key={index}
           onClick={() => handleSlideChange(index)}
           className={`w-3 h-3 rounded-full transition-all duration-500 ${
@@ -210,7 +222,7 @@ const CustomerReviews = () => {
               isTransitioning ? 'opacity-80' : 'opacity-100'
             }`}
           >
-            {getVisibleReviews().map((review, index) => (
+            {getVisibleReviews().map((review) => (
               <div
                 key={review.id}
                 className={`transition-all duration-500 ease-in-out
