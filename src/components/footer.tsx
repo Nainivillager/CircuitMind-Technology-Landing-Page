@@ -80,9 +80,14 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Company Info & Description */}
-          <div className="col-span-1 lg:col-span-1">
-            <h2 className="text-2xl font-bold text-white mb-4">Your Company</h2>
-            <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+
+          <div className="col-span-1 lg:col-span-1 flex flex-col items-center">
+            <img
+              className="h-16 md:h-20 object-contain transition-transform duration-300 hover:scale-105 rounded-full"
+              src="Clogo.webp"
+              alt="Company Logo"
+            />
+            <p className="text-gray-400 mb-6 text-sm leading-relaxed text-center">
               Delivering excellence in technology solutions and innovative
               services to empower your digital journey.
             </p>
