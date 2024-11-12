@@ -3,6 +3,7 @@ import Marque from '../components/marque';
 // import Features from './components/features';
 import Offerings from '../components/offerings';
 import CustomerFeedback from '../components/customerFeedback';
+import Galllery from '../components/galllery';
 function Home() {
   return (
     <>
@@ -13,6 +14,7 @@ function Home() {
         <Offerings />
 
         <CustomerFeedback />
+        <Galllery />
       </div>
     </>
   );
