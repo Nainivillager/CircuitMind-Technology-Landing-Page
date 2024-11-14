@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, ShoppingBag, User, UserPlus, Menu, X } from 'lucide-react';
+import { ShoppingBag, User, UserPlus, Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,12 +33,6 @@ export default function Navbar() {
 
           {/* Desktop Navigation Items */}
           <div className="hidden md:flex items-center space-x-6">
-            {/* Search Button */}
-            <button className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors duration-200 group">
-              <Search className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
-              <span className="text-sm font-medium">Search</span>
-            </button>
-
             {/* Store Link */}
             <Link
               to="/store"
@@ -75,12 +69,6 @@ export default function Navbar() {
           }`}
         >
           <div className="flex flex-col space-y-4 pb-6 pt-2">
-            {/* Search Button */}
-            <button className="flex items-center space-x-2 text-gray-700 hover:text-orange-600 transition-colors duration-200 group px-2 py-1 rounded-lg hover:bg-orange-50">
-              <Search className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
-              <span className="text-sm font-medium">Search</span>
-            </button>
-
             {/* Store Link */}
             <Link
               to="/store"

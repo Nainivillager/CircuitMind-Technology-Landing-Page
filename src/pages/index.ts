@@ -1,5 +1,5 @@
 // src/pages/index.ts
-import Register from './register';
+import Register from './registerPage';
 import Sign from './sign';
 import Store from './store';
 import Home from './home';

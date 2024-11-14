@@ -19,10 +19,10 @@ const Gallery = () => {
     { id: 4, src: '/ar.jpg', alt: 'Gallery Image 4' },
     { id: 5, src: '/hb.jpg', alt: 'Gallery Image 5' },
     { id: 6, src: '/clg.jpeg', alt: 'Gallery Image 6' },
-    { id: 7, src: '/c.jpg', alt: 'Gallery Image 3' },
-    { id: 8, src: '/ar.jpg', alt: 'Gallery Image 4' },
-    { id: 9, src: '/hb.jpg', alt: 'Gallery Image 5' },
-    { id: 10, src: '/clg.jpeg', alt: 'Gallery Image 6' }
+    { id: 7, src: '/c.jpg', alt: 'Gallery Image 7' },
+    { id: 8, src: '/ar.jpg', alt: 'Gallery Image 8' },
+    { id: 9, src: '/hb.jpg', alt: 'Gallery Image 9' },
+    { id: 10, src: '/clg.jpeg', alt: 'Gallery Image 10' }
   ];
 
   const loadMoreImages = () => {
