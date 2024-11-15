@@ -76,7 +76,7 @@ const SignInPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-100 to-emerald-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-teal-100 to-emerald-100 flex items-center justify-center mx:8 p-4 sm:mx:16 my-8 rounded-lg">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
           <div className="flex justify-center mb-4">

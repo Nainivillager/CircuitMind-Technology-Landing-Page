@@ -1,3 +1,4 @@
+import { styles } from './styles';
 interface OfferingCardProps {
   heading: string;
   description: string;
@@ -89,8 +90,14 @@ export default function Features() {
   ];
 
   return (
-    <div className="text-center pt-4 pb-2">
-      <div className="flex justify-center items-center bg-gray-100">
+    <div
+      className="text-center pt-8 pb-2 mx-8 mb-8 rounded-lg"
+      style={styles.mainSection}
+    >
+      <div
+        className="flex justify-center items-center py-4 mx-8 mb-0 rounded-lg"
+        style={styles.heading}
+      >
         {' '}
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
           {' '}
@@ -98,43 +105,44 @@ export default function Features() {
           <span className="block text-blue-600">Tailored Offerings!</span>{' '}
         </h1>
       </div>
-
-      {data.map((val, idx) => (
-        <div
-          key={idx}
-          className={`flex flex-col mx-8 ${
-            idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-          } items-center gap-8 py-12`}
-        >
-          {/* Image Container */}
-          <div className="w-full md:w-1/2 flex justify-center">
-            <img
-              src={val.img}
-              alt="img"
-              className="rounded-lg w-full h-auto object-cover shadow-lg"
-            />
-          </div>
-
-          {/* Content Container with Offerings Cards */}
-          <div className="w-full md:w-1/2 space-y-6">
-            <div className="px-4">
-              <h2 className="text-2xl font-bold mb-3">{val.heading}</h2>
-              <p className="text-gray-700 mb-6 text-xl">{val.subheading}</p>
+      <div>
+        {data.map((val, idx) => (
+          <div
+            key={idx}
+            className={`flex flex-col  ${
+              idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+            } items-center gap-8 py-8 px-8`}
+          >
+            {/* Image Container */}
+            <div className="w-full md:w-1/2 flex justify-center h-[38rem]">
+              <img
+                src={val.img}
+                alt="img"
+                className="rounded-lg w-full h-auto object-cover shadow-lg"
+              />
             </div>
 
-            {/* Offerings Cards Stack */}
-            <div className="space-y-4">
-              {val.offerings.map((offering, offeringIdx) => (
-                <OfferingCard
-                  key={offeringIdx}
-                  heading={offering.head}
-                  description={offering.discription}
-                />
-              ))}
+            {/* Content Container with Offerings Cards */}
+            <div className="w-full md:w-1/2 space-y-6 ">
+              <div className="px-4 ">
+                <h2 className="text-2xl font-bold mb-3">{val.heading}</h2>
+                <p className="text-gray-700 text-xl">{val.subheading}</p>
+              </div>
+
+              {/* Offerings Cards Stack */}
+              <div className="space-y-6 ">
+                {val.offerings.map((offering, offeringIdx) => (
+                  <OfferingCard
+                    key={offeringIdx}
+                    heading={offering.head}
+                    description={offering.discription}
+                  />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

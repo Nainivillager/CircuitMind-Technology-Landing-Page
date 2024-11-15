@@ -4,5 +4,7 @@ import Sign from './sign';
 import Store from './store';
 import Home from './home';
 import Error from './error';
-
-export { Register, Sign, Store, Home, Error };
+import Contact from './contact';
+import Gallery from '../components/galllery';
+import Services from './services';
+export { Register, Sign, Store, Home, Error, Contact, Gallery, Services };

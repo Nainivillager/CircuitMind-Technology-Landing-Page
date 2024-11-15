@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingBag, User, UserPlus, Menu, X } from 'lucide-react';
+import { styles } from './styles';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const navigate = useNavigate();
 
   return (
-    <nav className="bg-gray-200 shadow-md rounded-lg mx-2 sm:mx-4 lg:mx-6">
+    <nav
+      style={styles.navbar}
+      className="shadow-md rounded-lg mx-2 sm:mx-4 lg:mx-6"
+    >
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo Section with Link to Home */}

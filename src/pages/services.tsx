@@ -107,7 +107,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 
-export default function Features() {
+export default function Services() {
   const features = [
     {
       icon: <Cpu className="w-6 h-6 text-white" />,

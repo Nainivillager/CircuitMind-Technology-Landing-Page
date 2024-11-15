@@ -4,10 +4,11 @@ import Marque from '../components/marque';
 import Offerings from '../components/offerings';
 import CustomerFeedback from '../components/customerFeedback';
 import Galllery from '../components/galllery';
+import { styles } from '@/components/styles';
 function Home() {
   return (
     <>
-      <div className="bg-slate-50">
+      <div style={styles.wholeAppBg}>
         <HeroSection />
         <Marque />
         {/* <Features /> */}

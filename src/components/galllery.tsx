@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ZoomIn } from 'lucide-react';
 import '../App';
+import { styles } from './styles';
 // Define the image type
 interface ImageType {
   id: number;
@@ -30,100 +31,105 @@ const Gallery = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      {/* Heading with animated underline */}
-      <div className="text-center mb-8">
-        <div className="flex justify-center items-center py-10 bg-gray-100 animate-fadeIn">
-          {' '}
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
-            {' '}
-            Explore CircuitMind{' '}
-            <span className="block text-blue-800 animate-pulse">
-              Your Gallery of Learning & Inspiration
-            </span>{' '}
-          </h1>
-        </div>
-        <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full transform transition-all duration-300 hover:w-32 hover:bg-blue-600" />
-      </div>
-
-      {/* Main gallery grid with animation */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {images.slice(0, visibleImages).map((image) => (
+    <div className="mx-8 px-4 py-4 rounded-lg my-10" style={styles.mainSection}>
+      <div>
+        {/* Heading with animated underline */}
+        <div className="text-center mb-8">
           <div
-            key={image.id}
-            className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:scale-105 
-                    animate-fadeIn opacity-0"
-            style={{
-              animationDelay: `${image.id * 100}ms`,
-              animationFillMode: 'forwards'
-            }}
-            onClick={() => setSelectedImage(image)}
+            className="flex justify-center items-center py-6 animate-fadeIn rounded-lg"
+            style={styles.heading}
           >
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-64 object-cover"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-              <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transform scale-50 group-hover:scale-100 transition-all duration-300" />
-            </div>
+            {' '}
+            <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-gray-800 leading-tight">
+              {' '}
+              Explore CircuitMind{' '}
+              <span className="block text-blue-800 animate-pulse">
+                Your Gallery of Learning & Inspiration
+              </span>{' '}
+            </h1>
           </div>
-        ))}
-      </div>
+          <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full transform transition-all duration-300 hover:w-32 hover:bg-blue-600" />
+        </div>
 
-      {/* Show More Button */}
-      {visibleImages < images.length && (
-        <div className="text-center mt-8">
-          <button
-            onClick={loadMoreImages}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-full 
+        {/* Main gallery grid with animation */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-12">
+          {images.slice(0, visibleImages).map((image) => (
+            <div
+              key={image.id}
+              className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:scale-105 
+                    animate-fadeIn opacity-0"
+              style={{
+                animationDelay: `${image.id * 100}ms`,
+                animationFillMode: 'forwards'
+              }}
+              onClick={() => setSelectedImage(image)}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transform scale-50 group-hover:scale-100 transition-all duration-300" />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Show More Button */}
+        {visibleImages < images.length && (
+          <div className="text-center mt-8">
+            <button
+              onClick={loadMoreImages}
+              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-full 
                     transform transition-all duration-300 hover:scale-105 hover:shadow-lg
                     flex items-center justify-center mx-auto space-x-2"
-          >
-            <span>Show More</span>
-            <span className="text-sm">
-              ({images.length - visibleImages} more)
-            </span>
-          </button>
-        </div>
-      )}
-
-      {/* Modal for selected image */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative max-w-4xl mx-auto p-4">
-            <img
-              src={selectedImage.src}
-              alt={selectedImage.alt}
-              className="max-h-[80vh] w-auto rounded-lg shadow-2xl"
-            />
-            <button
-              className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors duration-200"
-              onClick={(e) => {
-                e.stopPropagation();
-                setSelectedImage(null);
-              }}
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              <span>Show More</span>
+              <span className="text-sm">
+                ({images.length - visibleImages} more)
+              </span>
             </button>
           </div>
-        </div>
-      )}
+        )}
+
+        {/* Modal for selected image */}
+        {selectedImage && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+            onClick={() => setSelectedImage(null)}
+          >
+            <div className="relative max-w-4xl mx-auto p-4">
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                className="max-h-[80vh] w-auto rounded-lg shadow-2xl"
+              />
+              <button
+                className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors duration-200"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedImage(null);
+                }}
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

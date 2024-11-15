@@ -1,6 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
 
-import { Register, Sign, Store, Home, Error } from '../pages';
+import {
+  Register,
+  Sign,
+  Store,
+  Home,
+  Error,
+  Contact,
+  Gallery,
+  Services
+} from '../pages';
 
 const NavRoutes: React.FC = () => {
   return (
@@ -10,6 +19,9 @@ const NavRoutes: React.FC = () => {
         <Route path="/store" element={<Store />} />
         <Route path="/sign" element={<Sign />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </>

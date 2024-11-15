@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Star, StarHalf, Quote } from 'lucide-react';
-
+import { styles } from './styles';
 const CustomerReviews = () => {
   interface Review {
     id: number;
@@ -64,7 +64,7 @@ const CustomerReviews = () => {
   const handleSlideChange = (newIndex: number) => {
     setIsTransitioning(true);
     setCurrentIndex(newIndex);
-    setTimeout(() => setIsTransitioning(false), 500);
+    setTimeout(() => setIsTransitioning(false), 900);
   };
 
   const renderStars = (rating: number) => {
@@ -193,26 +193,34 @@ const CustomerReviews = () => {
   );
 
   return (
-    <div className="container mx-auto px-4 py-12 max-w-6xl">
-      <div className="text-center mb-12 relative">
+    <div
+      className="container px-8 pt-8 mx-8 rounded-lg"
+      // style={styles.CustomerReviewSection}
+      style={styles.mainSection}
+    >
+      <div
+        className="text-center mb-12 relative py-2 rounded-lg "
+        style={styles.heading}
+      >
         <div className="absolute left-1/2 -translate-x-1/2 top-0 -translate-y-1/2 opacity-10">
           <Quote size={120} className="text-blue-600 transform -rotate-12" />
         </div>
+        <div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Hear from Our Happy Customers!
+          </h1>
 
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          Hear from Our Happy Customers!
-        </h1>
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-transparent rounded"></div>
+            <Star className="w-6 h-6 text-yellow-400 fill-yellow-400" />
+            <div className="h-1 w-20 bg-gradient-to-l from-blue-600 to-transparent rounded"></div>
+          </div>
 
-        <div className="flex items-center justify-center gap-4 mb-6">
-          <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-transparent rounded"></div>
-          <Star className="w-6 h-6 text-yellow-400 fill-yellow-400" />
-          <div className="h-1 w-20 bg-gradient-to-l from-blue-600 to-transparent rounded"></div>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Discover why our customers love our service through their genuine
+            experiences and stories
+          </p>
         </div>
-
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          Discover why our customers love our service through their genuine
-          experiences and stories
-        </p>
       </div>
 
       <div className="relative">

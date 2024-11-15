@@ -10,7 +10,7 @@ import {
   ArrowRight,
   Send
 } from 'lucide-react';
-
+import { styles } from './styles';
 const Footer = () => {
   const socialLinks = [
     {
@@ -72,7 +72,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300">
+    <footer className="bg-gradient-to-b  text-gray-300" style={styles.Footer}>
       {/* Top Accent Line */}
       <div className="h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600" />
 
