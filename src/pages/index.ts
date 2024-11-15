@@ -7,4 +7,15 @@ import Error from './error';
 import Contact from './contact';
 import Gallery from '../components/galllery';
 import Services from './services';
-export { Register, Sign, Store, Home, Error, Contact, Gallery, Services };
+import About from './about';
+export {
+  Register,
+  Sign,
+  Store,
+  Home,
+  Error,
+  Contact,
+  Gallery,
+  Services,
+  About
+};

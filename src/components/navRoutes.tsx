@@ -8,7 +8,8 @@ import {
   Error,
   Contact,
   Gallery,
-  Services
+  Services,
+  About
 } from '../pages';
 
 const NavRoutes: React.FC = () => {
@@ -17,6 +18,7 @@ const NavRoutes: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/store" element={<Store />} />
+        <Route path="/about" element={<About />} />
         <Route path="/sign" element={<Sign />} />
         <Route path="/register" element={<Register />} />
         <Route path="/gallery" element={<Gallery />} />
