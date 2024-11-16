@@ -194,7 +194,7 @@ const CustomerReviews = () => {
 
   return (
     <div
-      className="px-12 pt-8 mx-8 rounded-lg"
+      className="px-8 pt-8  rounded-lg mx-8"
       // style={styles.CustomerReviewSection}
       style={styles.mainSection}
     >
