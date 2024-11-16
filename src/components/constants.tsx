@@ -61,3 +61,110 @@ export const socialLinks = [
     hoverColor: 'hover:bg-red-600'
   }
 ];
+
+// Offering Section Data
+export const data = [
+  {
+    img: 'school.webp',
+    heading: 'Empowering School Students with Cutting-Edge Technology',
+    subheading:
+      'Innovative labs designed to equip Young Minds with essential skills in robotics and smart technologies',
+    offerings: [
+      {
+        head: 'Robotics and AI',
+        discription:
+          'Equip students with skills to design, build, and program robots and AI systems.'
+      },
+      {
+        head: 'IoT Lab',
+        discription:
+          'Introduce students to smart technologies, enabling them to create connected devices.'
+      },
+      {
+        head: 'AR/VR Lab',
+        discription:
+          'Bring immersive technologies to classrooms with cutting-edge AR/VR setups.'
+      },
+      {
+        head: 'Robotics in Curriculum',
+        discription:
+          'Integrate robotics into regular lessons, enhancing STEM education.'
+      }
+    ]
+  },
+  {
+    img: 'kidsLeaninwith.webp',
+    heading: 'Advanced Technological Training for College Students',
+    subheading:
+      'Specialized labs for Future Innovators to master advanced robotics, IoT, data science, and cybersecurity skills.',
+    offerings: [
+      {
+        head: 'Advanced Robotics & AI',
+        discription:
+          'Advanced skills for designing, building, and programming complex robots and AI systems.'
+      },
+      {
+        head: 'Smart IoT Solutions',
+        discription:
+          'In-depth exploration of smart technologies and creating connected devices for practical applications.'
+      },
+      {
+        head: 'Robotics Workshops',
+        discription:
+          'Hands-on workshops for college students, focusing on real-world problem-solving.'
+      },
+
+      {
+        head: 'Robotics in Curriculum',
+        discription:
+          'Embed robotics into college courses to prepare students for the tech-driven job market.'
+      }
+    ]
+  },
+  {
+    img: 'projectAsistance.webp',
+    heading: 'Personalized Robotics Trainig',
+    subheading: 'Robotics is now available at your Doorstemps!',
+    offerings: [
+      {
+        head: 'Robotics Delivered at your Home',
+        discription:
+          'We offer personalized robotics training for students in classes 6-12, ensuring tailored learning experiences that ignite curiosity and innovation. '
+      },
+      {
+        head: 'Hands On Experience',
+        discription:
+          ' Our hands-on approach helps young minds grasp complex concepts, build functional robots, and develop critical thinking skills. '
+      },
+      {
+        head: 'Electronics For Everyone ',
+        discription:
+          'Whether you are working on a school project or a personal endeavor, our support ensures you achieve your goals with ease. '
+      },
+      {
+        head: 'Project Assistance at your Doorstep',
+        discription:
+          'We offer doorstep project assistance for electronics projects, bringing expert guidance directly to you. '
+      }
+    ]
+  }
+];
+
+export const marqueData = [
+  {
+    image: 'Clogo.webp',
+    alt: 'company1 logo'
+  },
+  {
+    image: 'Clogo.webp',
+    alt: 'company2 logo'
+  },
+  {
+    image: 'Clogo.webp',
+    alt: 'company3 logo'
+  },
+  {
+    image: 'Clogo.webp',
+    alt: 'company4 logo'
+  }
+];

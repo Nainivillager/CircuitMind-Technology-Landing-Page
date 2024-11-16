@@ -1,24 +1,6 @@
 import Marquee from 'react-fast-marquee';
+import { marqueData } from './constants';
 export default function MarqueeSlider() {
-  const marqueData = [
-    {
-      image: 'Clogo.webp',
-      alt: 'company1 logo'
-    },
-    {
-      image: 'Clogo.webp',
-      alt: 'company2 logo'
-    },
-    {
-      image: 'Clogo.webp',
-      alt: 'company3 logo'
-    },
-    {
-      image: 'Clogo.webp',
-      alt: 'company4 logo'
-    }
-  ];
-
   return (
     <div className="w-full">
       <div className="relative w-full overflow-hidden py-8 mb-5">
