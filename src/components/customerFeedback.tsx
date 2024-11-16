@@ -194,14 +194,11 @@ const CustomerReviews = () => {
 
   return (
     <div
-      className="px-8 pt-8  rounded-lg mx-8"
+      className="px-8 pt-8 pb-2 rounded-lg mx-8"
       // style={styles.CustomerReviewSection}
       style={styles.mainSection}
     >
-      <div
-        className="text-center mb-12 relative py-2 rounded-lg "
-        style={styles.heading}
-      >
+      <div className="text-center mb-12 relative py-2 rounded-lg ">
         <div className="absolute left-1/2 -translate-x-1/2 top-0 -translate-y-1/2 opacity-10">
           <Quote size={120} className="text-blue-600 transform -rotate-12" />
         </div>

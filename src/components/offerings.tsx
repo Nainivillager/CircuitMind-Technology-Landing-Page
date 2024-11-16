@@ -78,12 +78,22 @@ export default function Features() {
         {
           head: 'Robotics Delivered at your Home',
           discription:
-            'We offer personalized robotics training at home for students in classes 6-12, ensuring tailored learning experiences that ignite curiosity and innovation. Our hands-on approach helps young minds grasp complex concepts, build functional robots, and develop critical thinking skills. '
+            'We offer personalized robotics training for students in classes 6-12, ensuring tailored learning experiences that ignite curiosity and innovation. '
+        },
+        {
+          head: 'Hands On Experience',
+          discription:
+            ' Our hands-on approach helps young minds grasp complex concepts, build functional robots, and develop critical thinking skills. '
+        },
+        {
+          head: 'Electronics For Everyone ',
+          discription:
+            'Whether you are working on a school project or a personal endeavor, our support ensures you achieve your goals with ease. '
         },
         {
           head: 'Project Assistance at your Doorstep',
           discription:
-            'We offer doorstep project assistance for electronics projects, bringing expert guidance directly to you. Whether you are working on a school project or a personal endeavor, our support ensures you achieve your goals with ease. Let us help you turn your electronic ideas into reality, right at your doorstep!'
+            'We offer doorstep project assistance for electronics projects, bringing expert guidance directly to you. '
         }
       ]
     }
@@ -94,9 +104,9 @@ export default function Features() {
       className="text-center pt-8 pb-2 mx-8 mb-8 rounded-lg"
       style={styles.mainSection}
     >
-      <div className="flex justify-center items-center py-4 mx-8 mb-0 rounded-lg">
+      <div className="flex justify-center items-center py-3 mx-8  rounded-lg">
         {' '}
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 leading-tight">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
           {' '}
           Discover Our{' '}
           <span className="block text-blue-600">Tailored Offerings!</span>{' '}

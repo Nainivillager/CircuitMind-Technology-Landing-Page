@@ -35,10 +35,7 @@ const Gallery = () => {
       <div>
         {/* Heading with animated underline */}
         <div className="text-center mb-8">
-          <div
-            className="flex justify-center items-center py-6 animate-fadeIn rounded-lg"
-            style={styles.heading}
-          >
+          <div className="flex justify-center items-center py-6 animate-fadeIn rounded-lg">
             {' '}
             <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-gray-800 leading-tight">
               {' '}
