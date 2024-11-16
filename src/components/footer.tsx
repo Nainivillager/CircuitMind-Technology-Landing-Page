@@ -1,44 +1,7 @@
-import {
-  Phone,
-  Mail,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Youtube,
-  MapPin,
-  Clock,
-  ArrowRight,
-  Send
-} from 'lucide-react';
+import { ArrowRight, Send } from 'lucide-react';
+import { contactInfo, socialLinks } from './constants';
 import { styles } from './styles';
 const Footer = () => {
-  const socialLinks = [
-    {
-      icon: <Facebook className="w-5 h-5" />,
-      href: 'https://www.facebook.com/people/CircuitMind-Technology/61558604498392/',
-      label: 'Facebook',
-      hoverColor: 'hover:bg-blue-600'
-    },
-    {
-      icon: <Instagram className="w-5 h-5" />,
-      href: 'https://www.instagram.com/circuitmind_technology/',
-      label: 'Instagram',
-      hoverColor: 'hover:bg-pink-600'
-    },
-    {
-      icon: <Linkedin className="w-5 h-5" />,
-      href: 'https://www.linkedin.com/in/circuitmind-technology/',
-      label: 'LinkedIn',
-      hoverColor: 'hover:bg-red-600'
-    },
-    {
-      icon: <Youtube className="w-5 h-5" />,
-      href: 'https://www.youtube.com/@circuitmindtechnology',
-      label: 'Youtube',
-      hoverColor: 'hover:bg-red-600'
-    }
-  ];
-
   const quickLinks = [
     { text: 'Home', href: '/' },
     { text: 'About Us', href: '/about' },
@@ -46,29 +9,6 @@ const Footer = () => {
     { text: 'Gallery', href: '/gallery' },
     { text: 'Services', href: '/services' },
     { text: 'Contact', href: '/contact' }
-  ];
-
-  const contactInfo = [
-    {
-      icon: <Phone className="w-5 h-5" />,
-      content: '+91 620 390 5950',
-      href: 'tel:+916203905950'
-    },
-    {
-      icon: <Mail className="w-5 h-5" />,
-      content: 'circuitmindtechnology@gmail.com',
-      href: 'mailto:circuitmindtechnology@gmail.com'
-    },
-    {
-      icon: <MapPin className="w-5 h-5" />,
-      content: 'c-112, H59, Cloud 24, Noida Sector 63, Uttar Pradesh',
-      href: 'https://maps.app.goo.gl/ELDWq5TsrRm8T2Wr6'
-    },
-    {
-      icon: <Clock className="w-5 h-5" />,
-      content: 'Mon - Fri: 9:00 AM - 6:00 PM',
-      href: 'https://maps.app.goo.gl/ELDWq5TsrRm8T2Wr6'
-    }
   ];
 
   return (
@@ -115,7 +55,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="group flex items-center text-gray-400 hover:text-white transition-colors duration-200"
+                    className="group flex items-center  hover:text-black transition-colors duration-200"
                   >
                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-200" />
                     {link.text}
@@ -135,11 +75,9 @@ const Footer = () => {
                 <a
                   key={index}
                   href={item.href}
-                  className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors duration-200"
+                  className="flex items-center space-x-3 hover:text-black transition-colors duration-200"
                 >
-                  <div className="flex-shrink-0 bg-gray-800 p-2 rounded-lg">
-                    {item.icon}
-                  </div>
+                  <div className="flex-shrink-0  p-2 ">{item.icon}</div>
                   <span className="text-sm">{item.content}</span>
                 </a>
               ))}

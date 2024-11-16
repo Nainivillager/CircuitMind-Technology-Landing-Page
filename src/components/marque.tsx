@@ -1,5 +1,4 @@
 import Marquee from 'react-fast-marquee';
-import { styles } from './styles';
 export default function MarqueeSlider() {
   const marqueData = [
     {
@@ -22,7 +21,7 @@ export default function MarqueeSlider() {
 
   return (
     <div className="w-full">
-      <div className="relative w-full overflow-hidden py-8 ">
+      <div className="relative w-full overflow-hidden py-8 mb-5">
         <Marquee
           speed={80}
           gradient={true}
@@ -30,7 +29,7 @@ export default function MarqueeSlider() {
           gradientWidth={50}
           className="overflow-hidden"
         >
-          <div className="flex items-center" style={styles.mainSection}>
+          <div className="flex items-center">
             {marqueData.map((data, index) => (
               <div
                 key={`${data.alt}-${index}`}

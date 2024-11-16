@@ -94,12 +94,9 @@ export default function Features() {
       className="text-center pt-8 pb-2 mx-8 mb-8 rounded-lg"
       style={styles.mainSection}
     >
-      <div
-        className="flex justify-center items-center py-4 mx-8 mb-0 rounded-lg"
-        style={styles.heading}
-      >
+      <div className="flex justify-center items-center py-4 mx-8 mb-0 rounded-lg">
         {' '}
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 leading-tight">
           {' '}
           Discover Our{' '}
           <span className="block text-blue-600">Tailored Offerings!</span>{' '}
