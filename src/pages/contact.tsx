@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8 my-8 mx-8 rounded-lg">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-0 sm:p-8 my-4 sm:my-8 mx-2 sm:mx-8 rounded-lg">
       <div className="max-w-6xl mx-auto">
         {/* Header Section with enhanced animation */}
         <div className="text-center mb-16 opacity-0 animate-[fadeIn_0.6s_ease-out_forwards]">
@@ -82,7 +82,7 @@ const Contact: React.FC = () => {
             />
           </div>
 
-          <div className="opacity-0 animate-[fadeIn_0.6s_ease-out_0.4s_forwards]">
+          <div className="opacity-0 break-words animate-[fadeIn_0.6s_ease-out_0.4s_forwards]">
             <ContactCard
               icon={Mail}
               title="Email Us"
@@ -121,7 +121,7 @@ const Contact: React.FC = () => {
                 <input
                   type="text"
                   className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg"
-                  placeholder="John"
+                  placeholder="Hem"
                 />
               </div>
               <div>
@@ -131,7 +131,7 @@ const Contact: React.FC = () => {
                 <input
                   type="text"
                   className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg"
-                  placeholder="Doe"
+                  placeholder="Joshi"
                 />
               </div>
             </div>
@@ -143,7 +143,7 @@ const Contact: React.FC = () => {
               <input
                 type="email"
                 className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg"
-                placeholder="john@example.com"
+                placeholder="hem@x.com"
               />
             </div>
 

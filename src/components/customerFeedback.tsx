@@ -194,7 +194,7 @@ const CustomerReviews = () => {
 
   return (
     <div
-      className="container px-8 pt-8 mx-8 rounded-lg"
+      className="px-12 pt-8 mx-8 rounded-lg"
       // style={styles.CustomerReviewSection}
       style={styles.mainSection}
     >
@@ -206,7 +206,7 @@ const CustomerReviews = () => {
           <Quote size={120} className="text-blue-600 transform -rotate-12" />
         </div>
         <div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-xl md:text-3xl lg:text-4xl font-bold mb-1 relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Hear from Our Happy Customers!
           </h1>
 

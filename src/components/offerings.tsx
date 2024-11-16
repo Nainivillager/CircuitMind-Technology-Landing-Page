@@ -114,7 +114,7 @@ export default function Features() {
             } items-center gap-8 py-8 px-8`}
           >
             {/* Image Container */}
-            <div className="w-full md:w-1/2 flex justify-center h-[38rem]">
+            <div className="w-full  md:w-1/2 h:1/3 flex justify-center md:h-[38rem]">
               <img
                 src={val.img}
                 alt="img"
