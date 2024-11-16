@@ -168,3 +168,35 @@ export const marqueData = [
     alt: 'company4 logo'
   }
 ];
+
+// Hero section data
+export const slides = [
+  {
+    id: 0,
+    imageUrl: '/robotics.webp',
+    title: 'Robotics Delivered at your Home',
+    description:
+      'We offer personalized at-home robotics training for grades 6-12, sparking curiosity and innovation. Hands-on sessions make complex concepts simple, building both robots and critical thinking skills.'
+  },
+  {
+    id: 1,
+    imageUrl: '/projectAsistance.webp',
+    title: 'Project Assistance at your Doorstep',
+    description:
+      'We offer doorstep electronics project assistance, ensuring expert guidance and effortless success for all your school or personal projects. Turn your ideas into reality, right at your doorstep!'
+  },
+  {
+    id: 2,
+    imageUrl: '/Drone.webp',
+    title: 'Drone It Yourself - DIY',
+    description:
+      'In our drone workshop, students build drones from scratch, gaining hands-on experience in assembly, flight mechanics, aerodynamics, electronics, and programming.'
+  },
+  {
+    id: 3,
+    imageUrl: '/automation.webp',
+    title: 'Mastering Automation',
+    description:
+      'Our mastering automation workshop dives into sensors and microcontrollers, teaching students to integrate them and gain a deep understanding of automation. '
+  }
+];

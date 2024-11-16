@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { styles } from './styles';
+import { slides } from './constants';
+
 interface SlideType {
   id: number;
   imageUrl: string;
@@ -85,7 +87,8 @@ const Carousel = ({
             alt={slide.title}
             className="object-cover w-full h-full"
           />
-          <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 md:p-6">
+          // black theme behind the text
+          <div className="absolute bottom-0 w-full bg-black/50 p-4 md:p-6">
             <h3 className="text-white text-lg md:text-xl lg:text-2xl font-bold">
               {slide.title}
             </h3>
@@ -119,7 +122,7 @@ const Carousel = ({
                 className="object-cover w-full h-full"
                 loading="lazy"
               />
-              <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 md:p-6">
+              <div className="absolute bottom-0 w-full bg-black/60 p-4 md:p-6">
                 <h3 className="text-white text-lg md:text-xl lg:text-2xl font-bold">
                   {slide.title}
                 </h3>
@@ -178,46 +181,17 @@ const Carousel = ({
 };
 
 export default function HeroSection() {
-  const slides = [
-    {
-      id: 0,
-      imageUrl: '/robotics.webp',
-      title: 'Robotics Delivered at your Home',
-      description:
-        'We offer personalized at-home robotics training for grades 6-12, sparking curiosity and innovation. Hands-on sessions make complex concepts simple, building both robots and critical thinking skills.'
-    },
-    {
-      id: 1,
-      imageUrl: '/projectAsistance.webp',
-      title: 'Project Assistance at your Doorstep',
-      description:
-        'We offer doorstep electronics project assistance, ensuring expert guidance and effortless success for all your school or personal projects. Turn your ideas into reality, right at your doorstep!'
-    },
-    {
-      id: 2,
-      imageUrl: '/Drone.webp',
-      title: 'Drone It Yourself - DIY',
-      description:
-        'In our drone workshop, students build drones from scratch, gaining hands-on experience in assembly, flight mechanics, aerodynamics, electronics, and programming.'
-    },
-    {
-      id: 3,
-      imageUrl: '/automation.webp',
-      title: 'Mastering Automation',
-      description:
-        'Our mastering automation workshop dives into sensors and microcontrollers, teaching students to integrate them and gain a deep understanding of automation. '
-    }
-  ];
-
   return (
-    <div className="p-4 my-6 rounded-lg mx-8 " style={styles.mainSection}>
+    <div className="p-4 my-6 rounded-lg mx-8" style={styles.mainSection}>
       <div className="container mx-auto my-0">
         <div className="flex flex-col lg:flex-row items-center gap-8 py-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight text-center lg:text-left lg:flex-1">
-            Dive into the{' '}
-            <span className="text-blue-500 block">World of Robotics</span> With
-            Us!
-          </h1>
+          <div className="lg:flex-1 p-6 rounded-lg">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight text-center lg:text-left">
+              Dive into the{' '}
+              <span className="text-blue-500 block">World of Robotics</span>{' '}
+              With Us!
+            </h1>
+          </div>
           <div className="w-full lg:w-3/5">
             <Carousel
               slides={slides}
